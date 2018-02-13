@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+%\usepackage[ utf8 ]{inputenc}
+\usepackage[magyar]{babel}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\usepackage{t1enc}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\title{Véletlen fizikai folyamatok, első házi feladat}
+\author{Horváth Bendegúz}
+
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\maketitle
+
+\section*{2. feladat}
+\subsection*{A feladat szövege}
+Feldobott érme leesése után egyenlő valószínűséggel fej (F) vagy írás (I).
+\\
+(a) Dobjuk fel az érmét kétszer. Milyen valószínűséggel kapunk két fejet (FF), illetve fej-írás (FI) sorrendet? Ugyanaz a két valószínűség?
+\\ 
+(b) Játsszuk a következő játékot! Addig dobálunk, amíg vagy két fej (FF - én nyerek), vagy fej-írás (FI - te nyersz) jön ki. Igazságos ez a játék?
+\subsection*{A feladat megoldása}
+(a) Két kimenetelű rendszernek tekinthető a feldobott érme rendszere, egyforma valószínűségű végkimenetelekkel, így $P(\text{F}) = \frac{1}{2} $ a fej valószínűsége, és  $P(\text{I}) = \frac{1}{2} $ az írás valószínűsége. Két dobás kimenetele a valószínűségek szorzata: $$P(\text{F,F}) = P(\text{F})\cdot P(\text{F}) = \frac{1}{2}\cdot \frac{1}{2} = \frac{1}{4} $$
+$$P(\text{F,I}) = P(\text{F})\cdot P(\text{I}) = \frac{1}{2}\cdot \frac{1}{2} = \frac{1}{4} $$
+$$P(\text{I,I}) = P(\text{I})\cdot P(\text{I}) = \frac{1}{2}\cdot \frac{1}{2} = \frac{1}{4} $$
+$$P(\text{I,F}) = P(\text{I})\cdot P(\text{F}) = \frac{1}{2}\cdot \frac{1}{2} = \frac{1}{4} $$
+\\
+A valószínűség $P = \frac{\text{kedvező elemi események száma}}{\text{összes elemi események száma}}$ értelmezésével az elemi események ${FF, IF, FI, II}$, kijön az előbbi végeredmény, hogy a két valószínűség egyforma, értékük $\frac{1}{4}$.\\
+(b)
+\end{document}
