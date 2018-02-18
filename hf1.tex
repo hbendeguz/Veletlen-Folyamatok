@@ -23,7 +23,13 @@
 %Or just google stuff
  
 \maketitle
-
+\section*{1. feladat}
+\subsection*{A feladat szövege}
+Véletlen és valóság.
+(a) Próbéljunk emlékezni arra az eseményre, amivel kapcsolatban először gondoltunk véletlenszerűségre. Miért tekintettük az eseméenyt véletlennek, s mit gondoltunk a jelenség hátteréről?
+\\(b) Emlékezzünk olyan, az életuünkben megtörtént eseméenyre, amikor kiszámoltunk valóoszínuűséegeket (az adott ismereteinkből kiindulva), s ezek a valóoszínűségek határozták meg a tetteinket!
+\subsection*{A feladat megoldása}
+\newpage
 \section*{2. feladat}
 \subsection*{A feladat szövege}
 Feldobott érme leesése után egyenlő valószínűséggel fej (F) vagy írás (I).
@@ -71,8 +77,40 @@ Vizsgáljuk a Brown mozgás előadáson tárgyalt, Einstein féle leírását, s
 $$P(x,t+\tau) = \int_{\infty}^{\infty}\Phi(\Delta)P(x-\Delta, t)d\Delta.$$
 Ez azon valószínűségek összege, hogy a részecske $x-\Delta$-ban volt $t$ időpilanatban és pont $\Delta$-t ugrott. Sorba fejtve:
 $$P(x,t)+\frac{\partial P(x,t)}{\partial t}\tau =\int_{\infty}^{\infty}\Phi(\Delta)d\Delta P(x,t) -\int_{\infty}^{\infty}\Phi(\Delta)\Delta d\Delta\frac{\partial P(x,t)}{\partial x} + \frac{1}{2}\int_{\infty}^{\infty}\Phi(\Delta)\Delta^2d\Delta\frac{\partial^2P(x,t)}{\partial x^2}  .$$
-A valószínűségeloszlás szimmetriája sérül, de az $\int_{\infty}^{\infty}\Phi(\Delta)d\Delta$ integrál továbbra is egyet ad, így az egyenlet rövidebb lesz:
+A valószínűségeloszlás függvény nem szimmetrikus, de az $\int_{\infty}^{\infty}\Phi(\Delta)d\Delta$ integrál továbbra is egyet ad, így az egyenlet rövidebb lesz:
 $$\frac{\partial P(x,t)}{\partial t}\tau = -\int_{\infty}^{\infty}\Phi(\Delta)\Delta d\Delta\frac{\partial P(x,t)}{\partial x} + \frac{1}{2}\int_{\infty}^{\infty}\Phi(\Delta)\Delta^2d\Delta\frac{\partial^2P(x,t)}{\partial x^2}$$
 $$\frac{\partial P(x,t)}{\partial t}\tau = -\overline \Delta\cdot\frac{\partial P(x,t)}{\partial x} + \frac{\overline{\Delta ^2}}{2}\cdot\frac{\partial^2P(x,t)}{\partial x^2}$$
-Az így kapott egyenlet annyiban különbözik az előadáson tárgyalt diffúziós egyenlettől, hogy benne maradt a $\Delta$ várható értékével szorzódó, helyszerint egyszeresen derivált valószínűség, negatív előjellel.
+Az így kapott egyenlet annyiban különbözik az előadáson tárgyalt diffúziós egyenlettől, hogy benne maradt a $\Delta$ várható értékével szorzódó, helyszerint egyszeresen derivált valószínűség, negatív előjellel.\\
+(b) A Fokker-Planck egyenelet megoldható, ha ismerjük a kezdeti elsozlásfüggvényt\cite{wik}, ami esetünkben, ha a részecske az origóból indul:
+$$ P(x, t = 0) = \delta(x)$$
+Vezessünk be egy új jelölést, $\frac{\overline{\Delta}}{\tau}\equiv v$, ahol $v$ az átlagos sebességnek felel meg. Ezzel az egyenlet:
+$$ \frac{\partial P(x,t)}{\partial t} = -v\frac{\partial P(x,t)}{\partial x} + D\frac{\partial ^2 P(x,t)}{\partial x^2},$$
+$D$ az előadáson is használt diffúziós együttható. Valamilyen ügyes transzformácóval a $v$-s tagot ki kell ejteni, hogy megoldhatóbb legyen az egyenlet. Legyen egy változó transzformáció, a koordinátarendszer mozogjon $v$ sebességgel:
+$$P(x,t) = W(x-vt, t) = W(y, t)$$
+\\Ekkor az egyenletünk a következőre módosul:
+$$\frac{\partial W(y,t)}{\partial t}-v\frac{\partial W(y,t)}{\partial y} = -v\frac{\partial W(y,t)}{\partial y} + D\frac{\partial^2 W(y,t)}{\partial y^2}$$
+Így kiesnek a $v$-s tagok, és az egyenlet az előadáson megoldott egyenletre egyszerűsödik, aminek megoldása:
+$$W(y,t) = \frac{1}{\sqrt{4\pi Dt}}e^{-\frac{y^2}{4Dt}}$$
+Ebből a $P$-t az $y$ visszatranszformálásával kaphatjuk meg:
+$$P(x,t) =\frac{1}{\sqrt{4\pi Dt}}e^{-\frac{(x-vt)^2}{4Dt}} $$
+A megoldás kielégíti a kezdeti feltételt is, $\lim_{t\to 0}P(x, 0) = \delta(x)$
+.
+\begin{thebibliography}{9}
+\bibitem{wik}
+\texttt{https://en.wikipedia.org/wiki/Fokker–Planck\_{}equation}
+
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
 \end{document}
+
+
+
+
