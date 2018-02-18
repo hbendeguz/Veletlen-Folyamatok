@@ -59,5 +59,20 @@ A másik esetben, amikor $p_+=3p_-=0.75$ a számolási módszerek hasonlóak, az
 $$\langle x_t \rangle = l\cdot N\cdot \Big(\frac{3}{4}-\frac{1}{4}\Big ) = \frac{N\cdot l}{2},$$
 $$\sigma^2 = {\langle x^2_t \rangle-\langle x_t \rangle ^2} = l^2\cdot N\cdot \frac{3}{16},$$
 $$\langle x^2_t \rangle = \sigma^2 + \langle x_t \rangle ^2  = l^2\Big ( \frac{N^2}{4} + \frac{3N}{16} \Big ) = l^2\frac{4N^2 + 3N}{16}$$
-
+\newpage
+\section*{4. feladat}
+\subsection*{A feladat szövege}
+Vizsgáljuk a Brown mozgás előadáson tárgyalt, Einstein féle leírását, s legyen sodródás is a rendszerben (szél fúj a víz felett). Ekkor a $\tau$ időnként megtett ugrások hosszának ($\Delta$) valószínűséegi eloszlása nem szimmetrikus $\Phi(-\Delta) \neq \Phi(\Delta)$, s várhatóan $\Delta =   \Delta\Phi(\Delta)d\Delta\neq 0$.\\
+(a) Írjuk fel a Chapman-Kolmogorov egyenletet, s deriváljuk a részecske megtalálási valószínűségét, $P (x, t)$-t meghatározó Fokker-Planck egyenletet! Mennyiben különbözik ez az egyenlet az előadáson tárgyalt diffúziós egyenlettől?
+\\
+(b) Írjuk fel az egyenlet megoldását arra az esetre, ha a virágporszem az origóból indul!
+\subsubsection*{A feladat megoldása}
+(a) A Chapman-Kolmogorov egyenlet a következőképpen néz ki:
+$$P(x,t+\tau) = \int_{\infty}^{\infty}\Phi(\Delta)P(x-\Delta, t)d\Delta.$$
+Ez azon valószínűségek összege, hogy a részecske $x-\Delta$-ban volt $t$ időpilanatban és pont $\Delta$-t ugrott. Sorba fejtve:
+$$P(x,t)+\frac{\partial P(x,t)}{\partial t}\tau =\int_{\infty}^{\infty}\Phi(\Delta)d\Delta P(x,t) -\int_{\infty}^{\infty}\Phi(\Delta)\Delta d\Delta\frac{\partial P(x,t)}{\partial x} + \frac{1}{2}\int_{\infty}^{\infty}\Phi(\Delta)\Delta^2d\Delta\frac{\partial^2P(x,t)}{\partial x^2}  .$$
+A valószínűségeloszlás szimmetriája sérül, de az $\int_{\infty}^{\infty}\Phi(\Delta)d\Delta$ integrál továbbra is egyet ad, így az egyenlet rövidebb lesz:
+$$\frac{\partial P(x,t)}{\partial t}\tau = -\int_{\infty}^{\infty}\Phi(\Delta)\Delta d\Delta\frac{\partial P(x,t)}{\partial x} + \frac{1}{2}\int_{\infty}^{\infty}\Phi(\Delta)\Delta^2d\Delta\frac{\partial^2P(x,t)}{\partial x^2}$$
+$$\frac{\partial P(x,t)}{\partial t}\tau = -\overline \Delta\cdot\frac{\partial P(x,t)}{\partial x} + \frac{\overline{\Delta ^2}}{2}\cdot\frac{\partial^2P(x,t)}{\partial x^2}$$
+Az így kapott egyenlet annyiban különbözik az előadáson tárgyalt diffúziós egyenlettől, hogy benne maradt a $\Delta$ várható értékével szorzódó, helyszerint egyszeresen derivált valószínűség, negatív előjellel.
 \end{document}
