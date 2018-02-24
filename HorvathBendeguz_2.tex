@@ -17,7 +17,11 @@
 
 \begin{document}
 \maketitle
+
+
+
 \section*{1. feladat}
+
 \subsection*{ A feladat szövege} A következőfeladatban leírt Perrin kísérlet megértéséhez oldjuk meg előszőr a két-dimenziós Brown mozgás
 egy egyszerűváaltozatát: $l$ rácsállandójúnégyzetrácson egy részecske $\tau$ időközönként, egyenlő valószínűséggel ugrik a négy szomszédos rácspont egyikébe. A részecske $ (x0 = 0, y0 = 0)$ pontból indul.
 Határozzuk meg a $t = N\tau $ idő alatti várható elmozdulást,  $\sqrt{\langle r^2 \rangle }= \sqrt{\langle x^2_t \rangle+ \langle y^2_t\rangle}$-t!
@@ -27,25 +31,82 @@ Határozzuk meg a $t = N\tau $ idő alatti várható elmozdulást,  $\sqrt{\lang
  
 \newpage
 \section*{2. feladat}
+
 \subsection*{ A feladat szövege}
 Perrin kísérletében kolloid részecskék mozgását vizsgáalták híg, vizes oldatban. A részecskék sugara
-$a = 0.52\mu m, \tau = 30s$-ként mérték a helyzetüket, s az ábrán látható négyzetrács rácsállandóa $3.125mu m$. Becsüljük meg a kolloid részecskék diffúziós együtthatóját kétféleképpen: (a) a kezdő és a végpont közötti elmozdulásból, feltételezve, hogy a mozgás diffúziv, és (b) a $\tau$ idő alatti ugráshosszok négyzetének átlagából!
+$a = 0.52\mu m, \tau = 30s$-ként mérték a helyzetüket, s az ábrán látható négyzetrács rácsállandóa $3.125\mu m$. Becsüljük meg a kolloidrészecskék diffúziós együtthatóját kétféleképpen: (a) a kezdő és a végpont közötti elmozdulásból, feltételezve, hogy a mozgás diffúziv, és (b) a $\tau$ idő alatti ugráshosszok négyzetének átlagából!
 
  
  \subsection*{A feladat megoldása}
+$(a) $ A feladat megoldásához meg kellett számolni mind a 3 részecskének a kiindulási helyüktől megtett távolságot és a lépések számát. Az így kapott eredményeket a következő táblázatban foglalom össze:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}\hline
 
+részecske & lépések száma & távolság négyzete [$ m$]& t [s]\\ \hline 
+baloldali &46 &$2.225 \cdot 10^{-9}$ &1380 \\ \hline
+középső &30 & $2.769 \cdot 10^{-9}$& 900 \\ \hline
+jobboldali &40  &$0.711\cdot 10^{-9}$ &1200   \\ \hline
 
+\end{tabular}
+\end{center}
+
+Kihasználva a következő összefüggést a diffúziós együtthatóra:
+$$R^2(t) = 2 D t.$$
+$R(t)$ a kiindulásiponttól megtett távolsága,  a képletbe behelyettesítve a diffúzós állandók sorrendben $8.15\cdot 10^{-13} \frac{m^2}{s}$, $1.53\cdot 10^{-12} \frac{m^2}{s}$, és $2.96\cdot 10^{-13} \frac{m^2}{s}$ lettek. Ezeknek az átlaga $D = 8.83\cdot 10^{-13} \frac{m^2}{s}$. \\ \\
+$(b)$ Ennél a feladatnál le kellett számolni egy bolyongásban az összes lépésnek a négyzetét, majd ennek az átlagát venni. Ezt megtettem, a számolásokat egy táblázatkezelő programban végeztem \cite{wik} . A  $D$ diffúziós együtthatót a következő módon lehet megkapni az ugráshosszok négyzetének átlagából:
+$$D = \frac{\langle \Delta ^2 \rangle }{2\tau}.$$
+$\Delta$ jelöli az ugráshosszakat, $\tau = 30 s$ esetünkben. Így, balról jobbra az egyes bolyongásokhoz tartozó diffuziós együtthatók: $1.36\cdot 10^{-12}\frac{m^2}{s}$, $6.24\cdot 10^{-13} \frac{m^2}{s}$ és $7.52\cdot 10^{-13} \frac{m^2}{s}$. \\ A diffúziós együtthatók átlaga: $D = 9.12\cdot 10^{-13} \frac{m^2}{s}$
+\\\\
+Bár az $(a)$ és  $(b)$ feladatoban egyes bolyongásokhoz tartozó $D$-k különböznek egymástól, az átlagok viszont egész közel vannak egymáshoz. Ezért a  $3$-as feladatban a kettőnek az átlagát fogom használni a becslésben.
 \newpage
 
 \section*{3. feladat} 
 \subsection*{ A feladat szövege}
+Használjuk a $(2)$ feladat eredményét, valamint a Brown mozgás Langevin féle leírásának eredményeképp
+kapott kifejezést a kolloidrészecskék diffúziós együttthatójára, s becsüjük meg az Avogadro számot! A kolloidrészecskék sűrűségét tekinthetjük vízhez közelinek, a hőmérsékletet pedig szobahőmérsékletnek.
+
  
  \subsection*{A feladat megoldása}
 
 \newpage
 \section*{4. feladat}
 \subsection*{ A feladat szövege}
+Tegyük fel, hogy a kolloidrészecskék diffúziós együttthatójárajára kapott kifejezés extrapolálható molekuláris
+szintre. Milyen értéket kapunk egy nem túlságosan nagy molekulekula vízben történő termális mozgásának diffúziós együtthatójára? Keressünk nagy (biológiai) molekulákat (DNS?), amelyekre a diffúziós együtható ismert, s hasonlítsuk össze értéküket a becsüt eredménnyel!
+
  
  \subsection*{A feladat megoldása}
+
+
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{wik}Horváth Bendegúz, 
+\texttt{http://hbendeguz.web.elte.hu/java/vélf2\_{}1}
+
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
