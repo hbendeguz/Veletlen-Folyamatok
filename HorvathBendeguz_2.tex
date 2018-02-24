@@ -9,6 +9,7 @@
 \usepackage{t1enc}
 \usepackage{placeins}
 \usepackage{caption}
+\usepackage{textcomp}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \title{Véletlen fizikai folyamatok, második házi feladat}
@@ -67,6 +68,13 @@ kapott kifejezést a kolloidrészecskék diffúziós együttthatójára, s becs�
 
  
  \subsection*{A feladat megoldása}
+ A megoldáshoz elhasználjuk a következő kifejezést, ami a Brown-mozgás Langevin féle levezetéséből kaptunk:
+$$D = \frac{k_B T}{6\pi\eta a}$$
+A kifejezésben $\eta$ a viszkozitás, $a$ a kolloidrészecske sugara, $T$ a hőmérséklet. Esetünkben $\eta$-t víz közeli sűrűségűnek vettem, $\eta = 8\cdot 10^{-4} Pa\cdot s$, $a = 5.2\cdot 10^{-7} m$, $T = 290 \text{\textdegree{K}}$. és $D$ az előző feladatból a kétféleképpen megkapott eredmény átlaga lett, $D = 8.97\cdot 10^{-13}\frac{m^2}{s}$. Ismert még, hogy $$k_B= \frac{R}{N_A},$$ ahol a $R$ az egyetemes gázállandó, $N_A$ pedig az Avogadro-szám. Így a megoldandó egyenlet:
+$$ D = \frac{R\cdot T}{6\pi \eta a N_A} .$$
+Megfelelő alakra rendezve és behelyettesítve az adatokat\cite{wik}, az Avogadro-számra $N_A = 3.461\cdot 10^{23} mol^{-1}$ jön ki, ami kicsivel több mint a fele az elméleti értéknek. 
+
+
 
 \newpage
 \section*{4. feladat}
@@ -76,8 +84,6 @@ szintre. Milyen értéket kapunk egy nem túlságosan nagy molekulekula vízben 
 
  
  \subsection*{A feladat megoldása}
-
-
 
 
 
