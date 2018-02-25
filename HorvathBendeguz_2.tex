@@ -3,6 +3,8 @@
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 %\usepackage[ utf8 ]{inputenc}
+
+\newcommand{\angstrom}{\text{\normalfont\AA}}
 \usepackage[magyar]{babel}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -30,7 +32,7 @@ Határozzuk meg a $t = N\tau $ idő alatti várható elmozdulást,  $\sqrt{\lang
  
 \subsection*{A feladat megoldása} Az órán megbeszltekhez hasonlóan a valószínűségi változó várható értékét felírhatjuk a valószínűségek és értékük összegeként, csak itt most két dimenziós vektorok összege lesz:
 $$\langle e_i \rangle = \frac{1}{4}\big ( (0, 1)+(0,-1)+(1,0)+(-1,0)\big ) =0, $$
-$$ x_N = l\cdot \sum_{i=1}^N\sqrt{e^2_i},$$
+$$ x_N = l\cdot \sum_{i=1}^N e_i,$$
 mert $e_i$ egy vektor, ezért kell a négyzetét venni, majd a gyökét, hogy a távolságot megkapjuk.
 $$\langle x^2_N\rangle = l^2\sum_{j=1}^Ne_j\sum_{i=1}^N \langle e_i \rangle = l^2\sum_{i,j=1}^N \langle e_i e_j\rangle = l^2 \Big (\sum_{i=1}^N \langle e^2_i \rangle +\sum_{i,j \neq 1}^N\langle e_i e_j \rangle \Big ) = l^2 \sum_{i=1}^N \langle e^2_i \rangle = {l^2N}$$
 $$\sqrt{\langle r^2 \rangle} = l\sqrt{N} $$
@@ -89,13 +91,36 @@ szintre. Milyen értéket kapunk egy nem túlságosan nagy molekulekula vízben 
 
  
  \subsection*{A feladat megoldása}
+  A diffúziós együtthatókat egy honlapon találtam\cite{coeff}, \cite{coeff2}.
+Az órán levezetett képlet, amibe behelyettesíttem:
+$$  D = \frac{k_B T}{6\pi\eta a}.$$
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Tapasztalati képlet & $a$ sugár & elméleti diffúziós együttható &számolt diffúziós együttható & T [\textdegree{K}]\\ \hline
+CO2 &1.16 $ \angstrom $ & $1.92\cdot 10^{-9} m^2/s$ & $1.88\cdot 10^{-9} m^2/s$ & 295  \\ \hline
+NH3 & 1.41 $ \angstrom $&$1.64\cdot 10^{-9} m^2/s$ & $1.47\cdot 10^{-9} m^2/s$   &285\\ \hline
+H2 & 0.5 $ \angstrom $ &$4.5\cdot 10^{-9} m^2/s $& $4.36\cdot 10^{-9} m^2/s $&298 \\ \hline
+$C_2H_6$ (etán) & 1.55 $ \angstrom $ & $1.2\cdot 10^{-9} m^2/s $ &$1.4\cdot 10^{-9} m^2/s $& 298 \\ \hline
 
 
+
+\end{tabular}
+\end{center}
+
+A képletből számolt értékek megközelítik az elméleti értéket, habár a sugár kiszámolása nem mindig volt pontos. A nagyobb biologiai molekulákhoz sajnos nem találtam adatokat.
 
 
 \begin{thebibliography}{9}
 \bibitem{wik}Horváth Bendegúz, 
 \texttt{http://hbendeguz.web.elte.hu/java/vélf2\_{}1}
+
+\bibitem{coeff}
+\texttt{http://www.thermopedia.com/content/696/}
+
+\bibitem{coeff2}
+\texttt{http://biofilmbook.hypertextbookshop.com/public\_{}version/artifacts/tables/ \\Module\_{}004/Table4-1\_{}DiffCoeffH2O.htm}
 
 \end{thebibliography}
 
