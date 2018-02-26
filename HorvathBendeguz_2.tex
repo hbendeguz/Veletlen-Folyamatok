@@ -33,7 +33,7 @@ Határozzuk meg a $t = N\tau $ idő alatti várható elmozdulást,  $\sqrt{\lang
 \subsection*{A feladat megoldása} Az órán megbeszltekhez hasonlóan a valószínűségi változó várható értékét felírhatjuk a valószínűségek és értékük összegeként, csak itt most két dimenziós vektorok összege lesz:
 $$\langle e_i \rangle = \frac{1}{4}\big ( (0, 1)+(0,-1)+(1,0)+(-1,0)\big ) =0, $$
 $$ x_N = l\cdot \sum_{i=1}^N e_i,$$
-mert $e_i$ egy vektor, ezért kell a négyzetét venni, majd a gyökét, hogy a távolságot megkapjuk.
+ahol $x_N$ a részecske helye. A távolság a helyvektor önmagával vett skalárisszorzata:
 $$\langle x^2_N\rangle = l^2\sum_{j=1}^Ne_j\sum_{i=1}^N \langle e_i \rangle = l^2\sum_{i,j=1}^N \langle e_i e_j\rangle = l^2 \Big (\sum_{i=1}^N \langle e^2_i \rangle +\sum_{i,j \neq 1}^N\langle e_i e_j \rangle \Big ) = l^2 \sum_{i=1}^N \langle e^2_i \rangle = {l^2N}$$
 Így a távolság várható értéke:
 $$\sqrt{\langle r^2 \rangle} = l\sqrt{N} $$
@@ -76,7 +76,7 @@ kapott kifejezést a kolloidrészecskék diffúziós együttthatójára, s becs�
 
  
  \subsection*{A feladat megoldása}
- A megoldáshoz elhasználjuk a következő kifejezést, ami a Brown-mozgás Langevin féle levezetéséből kaptunk:
+ A megoldáshoz felhasználjuk a következő kifejezést, ami a Brown-mozgás Langevin féle levezetéséből kaptunk:
 $$D = \frac{k_B T}{6\pi\eta a}$$
 A kifejezésben $\eta$ a viszkozitás, $a$ a kolloidrészecske sugara, $T$ a hőmérséklet. Esetünkben $\eta$-t víz közeli sűrűségűnek vettem, $\eta = 8\cdot 10^{-4} Pa\cdot s$, $a = 5.2\cdot 10^{-7} m$, $T = 290 \text{\textdegree{K}}$. és $D$ az előző feladatból a kétféleképpen megkapott eredmény átlaga lett, $D = 8.97\cdot 10^{-13}\frac{m^2}{s}$. Ismert még, hogy $$k_B= \frac{R}{N_A},$$ ahol a $R$ az egyetemes gázállandó, $N_A$ pedig az Avogadro-szám. Így a megoldandó egyenlet:
 $$ D = \frac{R\cdot T}{6\pi \eta a N_A} .$$
@@ -114,7 +114,7 @@ A képletből számolt értékek megközelítik az elméleti értéket, habár a
 
 
 \begin{thebibliography}{9}
-\bibitem{wik}Horváth Bendegúz, 
+\bibitem{wik}
 \texttt{http://hbendeguz.web.elte.hu/java/vélf2\_{}1}
 
 \bibitem{coeff}
