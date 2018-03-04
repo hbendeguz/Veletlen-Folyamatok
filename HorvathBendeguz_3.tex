@@ -22,7 +22,7 @@
 \maketitle
 \section*{1. feladat}
 \subsection*{A feladat szövege}
-Egy szobában T=200$\text{textdegree{C}}$ hőmérsékletű ideális gáznak tekinthető levegő van. Számítsuk
+Egy szobában T=20$\text{ \textdegree{C}}$ hőmérsékletű ideális gáznak tekinthető levegő van. Számítsuk
 ki mennyi idő alatt jut el egy vízmolekula a szoba egyik végéből a másikba tisztán diffúziv mozgással.\\
 Segítség:
 A kinetikus elmélet a gázok diffúziós együtthatójára a következő kifejezést adja (és az eredményt érthetjük is a Brown mozgásról tanultak alapján):
@@ -32,13 +32,24 @@ A valóságban a szagok sokkal gyorsabban terjednek egy szobában, annak ellené
 
 
 \subsection*{A feladat megoldása}
-
-
+Felírva az ekvipartíció tételét megkaphatjuk a $v$ sebességet:
+$$E = \frac{1}{2}m\big (v^2_x+v^2_y+v^2_z \big ) = \frac{3}{2}k_B T.$$
+A kéletbe behelyettesítve $T = 293$, a levegő moláris tömege $18.015 \text{ }g/mol$, amiből egy mlekula tömege $\approx 18.015/8.31/10^3$ kg.
+ $$\overline{v} = \sqrt{293\cdot 10^3 \frac{3}{2.16 }} \approx 638 \text{  }\frac{m}{s} $$
+A vízmolekula szabad úthossza kell még, hogy a diffúziós együtthatóját megkaphassuk. A víz molekula átmérőjét $2.75\cdot10^{-10}\text{ }m$-nek vettem\cite{diam}. A levegő koncentrációját pedig $55 mol/l$-nek \cite{conc}.
+Így a szabad úthossza:
+$$l = \frac{1}{55 \pi\cdot 2.75^2\cdot 10^{-20}\cdot 6\cdot 10^{23}\cdot 10^3} = \approx 1.27 \cdot 10^{-10} \text{ m.}$$
+A diffúziós együttható:
+$$D = \frac{1}{3}\cdot 1.27\cdot 10^{-10}\cdot 638 = 2.7\cdot 10^{-8} \text{  }\frac{m^2}{s} .$$
+Felhasználva az előző órákról a diffúziós üsszefüggést:
+$$R(t) = 2Dt,$$
+ahol a képletben $R(t)$ a távolság, $t$ az idő és $D$ a diffúziós együttható. A szobát egy $7 \times 5\times 3 \text{  }m^3$ téglatestnek tekintem, így az egyik sarkából $\sqrt{49+25+9} = 9.1 m$ utat kell megtennie, hogy átérjen a legtávolabb lévő sarkába. Behelyettesítve a fenti képlet átalakított verziójába :
+$$t =  \frac{9.11\cdot 10^{10}}{2\cdot 1.27} = 3.58\cdot 10^{10}\text{ s}$$
+A kapott végeredmény nagyságrendekkel nagyobb a tapasztaltaknál, tisztán diffúzióval nagyon sok idő lenne, hogy a szagok eljussanak hozzánk. Valóságban apró szellők, nehezebb molekulák, áramlatok gyorsabban 
 \newpage
 \section*{2. feladat}
 \subsection*{A feladat szövege}
-Írjuk fel az évfolyam évről-évre változó létszámát meghatározó master egyenletet. Gon-
-dolkozzunk el azon, hogy mi határozza meg az átmeneti rátákat!
+Írjuk fel az évfolyam évről-évre változó létszámát meghatározó master egyenletet. Gondolkozzunk el azon, hogy mi határozza meg az átmeneti rátákat!
 
 \subsection*{A feladat megoldása}
 
@@ -51,5 +62,13 @@ szomszédos rácspontba ugrik. A részecske az origóhoz van kötve egy rugalmas
 (b) Használjuk a részletes egyensúly elvét konkrét, egyensúlyhoz vezető átmeneti ráták meghatározására!
 
 \subsection*{A feladat megoldása}
+\begin{thebibliography}{9}
 
+\bibitem{diam}
+\texttt{https://www.researchgate.net/post/what\_{}is\_{}the\_{}size\_{}of\_{}water\_{}moleculeH2O}
+\bibitem{conc}
+\texttt{https://www.quora.com/What-is-the-molar-concentration-of-water-in-1-liter-of-pure-water}
+
+
+\end{thebibliography}
 \end{document}
