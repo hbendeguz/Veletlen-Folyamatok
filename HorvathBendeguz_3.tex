@@ -62,6 +62,22 @@ szomszédos rácspontba ugrik. A részecske az origóhoz van kötve egy rugalmas
 (b) Használjuk a részletes egyensúly elvét konkrét, egyensúlyhoz vezető átmeneti ráták meghatározására!
 
 \subsection*{A feladat megoldása}
+A részecske energiája a az $n.$ rácspontban:
+$$E_n = E_0+\frac{1}{2}k(an)^2,$$
+ahol $E_0$ egy konstans alapállapoti energia. A részecske $n$ állapotból $n\pm 1$ állapotba ugorhat. Az $n.$ állapotban tartózkodás valószínűségét egyensúlyi állapotban felírhatjuk az órán használt módon:
+$$P^{(e)}_n = \frac{e^{-\frac{E_n}{k_B T}}}{Z},$$
+$Z$ az állapotösszeget jelöli.  A Master egyenlet:
+$$\frac{dP_n(t)}{dt }= -W_{n+1,n}P_n(t)-W_{n-1,n}P_{n}(t) + W_{n, n+1}P_{n+1}(t)+W_{n, n-1}P_{n-1}(t)$$
+A részletes egyensúly elvét  használva az átmeneti rátákat így számolhatjuk:
+$$\frac{W_{n+1, n}}{W_{n, n+1}} = \frac{P_{n+1}}{P_n} = \frac{e^{-\beta E_{n+1}}}{e^{-\beta E_n}} = e^{\beta (E_n-E_{n+1})} = e^{\beta\frac{1}{2}ka^2(1-2n)}$$
+$$\frac{W_{n-1,n}}{W_{n, n-1}} = \frac{P_{n-1}}{P_n} = e^{\beta \frac{1}{2}ka^2(2n-1)}$$
+A fenti egyenletekben $\beta = k_B T$. Adjunk meg egy olyan feltételt, hogy a részecske ugrási rátája $\frac{1}{\tau}$ legyen, ha az origó felé ugrik, és $\frac{1}{\tau}e^{\beta\frac{1}{2}ka^2(1-2|n|)}$, ha az origótól elfele ugrik. Az abszolútéték az $n$-re a negatív $n$ értékek miatt kell.
+ 
+
+
+
+
+
 \begin{thebibliography}{9}
 
 \bibitem{diam}
