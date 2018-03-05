@@ -14,7 +14,7 @@
 \usepackage{textcomp}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\title{Véletlen fizikai folyamatok, második házi feladat}
+\title{Véletlen fizikai folyamatok, harmdik házi feladat}
 \author{Horváth Bendegúz}
 
 
@@ -45,14 +45,20 @@ Felhasználva az előző órákról a diffúziós üsszefüggést:
 $$R(t) = 2Dt,$$
 ahol a képletben $R(t)$ a távolság, $t$ az idő és $D$ a diffúziós együttható. A szobát egy $7 \times 5\times 3 \text{  }m^3$ téglatestnek tekintem, így az egyik sarkából $\sqrt{49+25+9} = 9.1 m$ utat kell megtennie, hogy átérjen a legtávolabb lévő sarkába. Behelyettesítve a fenti képlet átalakított verziójába :
 $$t =  \frac{9.11\cdot 10^{10}}{2\cdot 1.27} = 3.58\cdot 10^{10}\text{ s}$$
-A kapott végeredmény nagyságrendekkel nagyobb a tapasztaltaknál, tisztán diffúzióval nagyon sok idő lenne, hogy a szagok eljussanak hozzánk. Valóságban apró szellők, nehezebb molekulák, áramlatok gyorsabban 
+A kapott végeredmény nagyságrendekkel nagyobb a tapasztaltaknál, tisztán diffúzióval nagyon sok idő lenne, hogy a szagok eljussanak hozzánk. Valóságban apró szellők, nehezebb molekulák, molekulák közötti taszítóerők, áramlatok gyorsítják a folyamatot. 
 \newpage
 \section*{2. feladat}
 \subsection*{A feladat szövege}
 Írjuk fel az évfolyam évről-évre változó létszámát meghatározó master egyenletet. Gondolkozzunk el azon, hogy mi határozza meg az átmeneti rátákat!
 
 \subsection*{A feladat megoldása}
-
+A master egyenlet általános formáját felírhatjuk:
+$$\frac{dP_n(t)}{dt} = -\sum_n\sum_{n'}W_{n'n}P_n(t)+ \sum_{n'}\sum_{n}W_{nn'}P_{n'}(t)$$
+Az évfolyamot tekinthetjük egy populációnak, ami egy "születési-halálozási" folyamatban van benne.  A születő egyedeket tekinthetjük a csatlakozó diákoknak, akik "visszacsúsznak" az alattuk lévő évfolyamba vagy Erasmusos cserediákként tagja lesz egy kis ideig a populációnak. Az elhalálozó egyedek pedig akik kikerülnek a rendszerből, otthagyják az egyetemet vagy lejjebb csúsznak. Az átmeneti ráták időfüggetlenek, és a következő módon írhatóak\cite{book}:
+$$W_{nn'} = t^+_{n'}\delta_{n,n'+1}+t^-_{n'}\delta_{n,n'-1},$$
+ahol $\delta$ a Kronecker-delta szimbólum, $t^\pm_n$ pedig az $n \to n\pm1$ átmenet valószínűsége egységidő alatt. Az általános master egyenletből az átmeneti rátákkal a következő egyenletet kapjuk:
+$$\partial_tP_n(t) = t^+_{n-1}P_{n-1}(t)+ t^-_{n+1}P_{n+1}(t) - [t^+_n + t^-_n]P_n(t)$$
+Az egyenletnek nincs általános megoldási módszere, stacionárius esetben viszont van. Itt az átmeneti ráták nem annyira véletlen folyamatok, inkább emeberi döntésektől függenek.
 \newpage
 \section*{3. feladat}
 \subsection*{A feladat szövege}
@@ -83,7 +89,9 @@ A fenti egyenletekben $\beta = k_B T$. Adjunk meg egy olyan feltételt, hogy a r
 \bibitem{diam}
 \texttt{https://www.researchgate.net/post/what\_{}is\_{}the\_{}size\_{}of\_{}water\_{}moleculeH2O}
 \bibitem{conc}
-\texttt{https://www.quora.com/What-is-the-molar-concentration-of-water-in-1-liter-of-pure-water}
+\texttt{https://www.quora.com/What-is-the-molar-concentration-of-water-in-1\\-liter-of-pure-water}
+\bibitem{book}
+ Professor Dr. Crispin W. Gardiner \\Handbook of Stochastic Methods for Physics, Chemistry and the Natural Sciences. Berlin, Heidelberg (1983)
 
 
 \end{thebibliography}
