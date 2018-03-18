@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+%\usepackage[ utf8 ]{inputenc}
+\def\doubleunderline#1{\underline{\underline{#1}}}
+\newcommand{\angstrom}{\text{\normalfont\AA}}
+\usepackage[magyar]{babel}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\usepackage{t1enc}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\title{Véletlen fizikai folyamatok, ötödik házi feladat}
+\author{Horváth Bendegúz}
+
+\begin{document}
+\maketitle
+\section*{1. feladat}
+\subsection*{A feladat szövege}
+Vizsgáljuk az előadáson tárgyalt 2 Ising spinből álló rendszer relaxációjának problémáját! Az előadáson megkaptuk a rendszer dinamikai mátrixát, s meghatároztuk a sajátvektorokat és a megfelelő sajátértékeket (A számolás megtalálható a kurzus honlapján ”Ising spinek dinamikája” cím alatt is).\\
+(i) Ismerve az összes sajátvektort és sajátértékeket, határozzuk meg milyen valószínűséggel van a rendszer t időpontban az $s_1 = {-1}$, $s_2 = +1$ állapotban, ha a kezdeti állapot $s_1 = +1$,$s_2 =-1$ volt.\\
+(ii) Számítsuk ki a rendszer átlagos mágnesezetségének $[M(t) = \langle(s_1+s_2)\rangle] $időfejlődésést, ha a kezdeti állapotban az $s_1 = 1$, $ s_2 = 1$ állapot és az $s_1 = -1$, $s_2 = +1$ állapot is 1/2 valószínűséggel van jelen.
+\subsection*{A feladat megoldása}
+
+\newpage
+\section*{2. feladat}
+\subsection*{A feladat szövege}
+Egy háromszögön egy részecske ugrál a szomszédos csúcsok között. Az ugás rátája $w_1$
+az óramutatójárásával egy irányban és $w_2$ az ellenkezőirányban. Feladatok:\\\\
+Írjuk fel a master egyenletet az i-edik csúcsban tartózkodás valószíűségére!\\ 
+Határozzuk meg a stacionáris megoldást!\\
+Határozzuk meg a rendszer rrelaxációs idejét  (előszőr próbáljuk megbecsülni az értékét)!
+
+
+\subsection*{A feladat megoldása}
+$i  \epsilon  \{1, 2,3 \}$, így az egyenletrendszerünk a következő:
+$$\partial_t P_1 = -(w_1 + w_2)P_1 + w_2P_2 + w_1P_3$$
+$$\partial_t P_2 = -(w_1 + w_2)P_2 + w_2P_3 + w_1P_1$$
+$$\partial_t P_3 = -(w_1 + w_2)P_3 + w_2P_1 + w_1P_2$$\\
+A következő átmeneti mátrixot használom majd:
+\[
+\doubleunderline\alpha=
+  \begin{bmatrix}
+    -(w_1+w_2) & w_2 & w_1 \\
+    w_1&-(w_1+w2)&w_2\\
+    w_2&w_1&-(w_1 + w_2)
+    
+  \end{bmatrix}
+\] Így a következő sajátértékegyenletet írhatjuk fel:
+$$\partial _t\vec{P} =\doubleunderline\alpha  \vec{P},$$
+$\vec{P} = (P_1, P_2, P_3)$ jelöléssel. Stacionárius állapotban az egyenlet baloldala nulla, a $0$-ás sajátértékhez tartozó sajátvektor a megoldásunk. 
+$$0\vec{P} = \doubleunderline\alpha_0 \vec{P}.$$
+A homogén, lineáris egyenletrendszer túlhatározott, így kell mellékfeltételként: $\sum^3_{i = 1}P_i = 1$ és $P_i> 0.$ A következő vektor kielégíti az egyenleteket:
+\[
+\vec{P}=
+  \begin{bmatrix}
+    \frac{1}{3(w_1+w_2)}\\
+   \frac{1}{3(w_1+w_2)}\\
+    \frac{1}{3(w_1+w_2)}
+    
+  \end{bmatrix}
+\]
+A rendszer szimmetrikussága miatt nem meglepő a stacionárius állapotra kapott eredmény. Relaxációs idő számolásához ismét felírhatjuk a sajátérték egyenletet, de most általános esetben oldjuk meg:
+$$\partial _t \vec{P_\alpha} = \lambda_\alpha \vec{P_\alpha},$$ 
+ahol $\lambda_\alpha $ az $\alpha$-adik sajátértéke. A megoldást kereshetjük a következő alakban:
+$$\vec{P}_\alpha (t) = a_\alpha e^{-\lambda \frac{t}{\tau}}\vec{P_\alpha}$$
+A relaxációs idő pedig $\tau_{relax} = \frac{\tau}{|\lambda_{min}|}$
+
+
+
+
+\newpage
+\section*{3. feladat}
+\subsection*{A feladat szövege}
+Meredek hegyoldalban függőegesen $l$ távolságra vannak a kapaszkodók. A hegymászó $w$ rátával lép felfelé, s $w_0$ annak a rátája, hogy lecsúszik egy szintet, s onnan folytatja a mászást.
+Feladatok:\\
+(i) Irjuk fel az egyenletet, amely meghatározza, hogy a hegymázó milyen $P_n$ valószínűségel van $nl$ magasságban!\\
+(ii) Használjuk a generátorfüggvény formalizmust a stacionárius eloszlás kiszámítására!\\
+ (iii) Határozzuk meg, hogy átlagosan milyen magasra jut a hegymászó!
+\subsection*{A feladat megoldása}
+A master egyenlet az $nl$ magasságban tartózkodás valószínűsége  a következőképpen néz ki:
+$$ \partial_tP_n = -(w + w_0)P_n + w_0P_{n+1} + wP_{n-1},$$
+$n = 0$ esetben viszont:
+$$\partial_t P_0 = -wP_0 + w_0P_1$$
+Legyen
+$$q = \frac{w}{w_0} \text{ és } \tau = \frac{1}{w_0} .$$
+Így az egyenletek:
+$$\tau \partial_t P_n = -(q+1)P_n + P_{n+1} + qP_{n-1}$$
+$$ \tau \partial_t P_0 = -qP_0 + P_1.$$
+Alkalmazva a generátorfüggvény formalizmusát:
+$$\tau \partial _t G(s, t ) = \sum_{n = 0}e^{-sn}P_n = -qP_0 + P_1 + \sum_{n =1}\big [-(1+q)e^{-sn}P_n + qe^{-sn}P_{n-1} + e^{-sn}P_{n+1}\big]$$
+A jobboldali tagban a szummában lévő utolsó tagot a következő alakra lehet hozni:
+$$\sum_{n =1}e^{-sn}P_{n+1} = e^s\sum_{n = 1}e^{-s(n+1)}P_{n+1}= e^s\sum_{m = 2}e^{-sm}P_m. $$
+Az ultolsó előtti tagot:
+$$q\sum_{n = 1}e^{-sn}P_{n-1} = qe^{-s}\sum_{n = 1} e^{-s(n-1)}P_{n-1} = qe^{-s}\sum_{m =0}  P_m.$$
+Kiegészítve a a $P_0$-s tagokkal a szummás részt átírva generátorfüggvényekre:
+$$\tau \partial_tG(s,t) = (1-e^{-s})P_0+ \big [-1-q+qe^{-s}+ e^s\big ]G(s,t)$$
+A stacionárius megoldás kiszámításánál az időszerinti parciális derivált 0, így 
+$$G_e(s) = \frac{(1-e^s)P_0}{1-e^s+q-qe^-s} = \frac{P_0}{1-qe^{-s}}$$
+$G(s = 0) = 1$ feltétel miatt $P_0 = 1-q.$  Milyen magasra jut a hegymászó átlagosan? A várhatóértéket a generátor fügvényekkel a következő módon számolhatjuk:
+$$\langle n \rangle = -\partial_s G_e\vline_{s = 0}$$
+Így a deriválás után:
+$$\langle n\rangle = -\frac{(1-q)qe^{-s}}{(1-qe^{-s})^2}\vline_{s=0} = \frac{q}{1-q} = \frac{\frac{w}{w_0}}{1-\frac{w}{w_0}}= \frac{w}{w_0-w}.$$
+ebből az látszik, hogy ahhoz, hogy $\langle n \rangle$ pozitív legyen  $w$-nek kisebbnek kell lennie mint $w_0$, ami nem egyezik a fizikai képpel, felfelé jutási rátának nagyobbnak kéne lennie. Ez valószínűleg abból fakad, hogy egyenúlyi állapotra vonatkozik, a hegymászónak pedig az egyensúlyi állapot a hegy tetejn lenne, oda igyekszik. mászását pedig úgy képzelhetjük el, mint ahogy az előző házifeladatban a részecske beért a nullapontba. Ha a magasságot, amit átlagosan elér n lépés után a következő módon számoljuk:
+$$\langle n\cdot l \rangle = l\cdot n (w-w_0),$$
+fizikaibb képet kapunk.
+
+\end{document}
