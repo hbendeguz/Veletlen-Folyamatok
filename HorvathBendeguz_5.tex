@@ -25,6 +25,69 @@ Vizsgáljuk az előadáson tárgyalt 2 Ising spinből álló rendszer relaxáci�
 (i) Ismerve az összes sajátvektort és sajátértékeket, határozzuk meg milyen valószínűséggel van a rendszer t időpontban az $s_1 = {-1}$, $s_2 = +1$ állapotban, ha a kezdeti állapot $s_1 = +1$,$s_2 =-1$ volt.\\
 (ii) Számítsuk ki a rendszer átlagos mágnesezetségének $[M(t) = \langle(s_1+s_2)\rangle] $időfejlődésést, ha a kezdeti állapotban az $s_1 = 1$, $ s_2 = 1$ állapot és az $s_1 = -1$, $s_2 = +1$ állapot is 1/2 valószínűséggel van jelen.
 \subsection*{A feladat megoldása}
+(i) A sajátvektorokat és a sajátértékeket ismerjük, ezzel a tudással egy állapot valószínűségét így számolhatjuk ki:
+$$\vec{P}(t) = P^{(e)}(t)+\sum^4_{i = 2}a_ie^{\lambda_it}\vec{P^{(i)}}$$
+az $a_i$ együtthatókat a kezdeti feltételekből számolhatjuk, ami esetünkben $(\uparrow\downarrow)$ állapot. A sajátvektorok a következőek:
+\[
+\vec{P}^{(e)} = \frac{1}{2(e^{K}+e^{-K})}
+\begin{pmatrix}
+	e^{K}\\
+	e^{-K}\\
+	e^{-K}\\
+	e^{K}
+\end{pmatrix}
+\hspace{1cm}
+\vec{P}^{(2)}=
+  \begin{pmatrix}
+	1\\
+	-1\\
+	-1\\
+	1
+\end{pmatrix}
+\hspace{1cm}
+\vec{P}^{(3)} =
+\begin{pmatrix}
+	1\\
+	0\\
+	0\\
+	-1
+\end{pmatrix}
+\hspace{1cm}
+\vec{P}^{(4)}
+\begin{pmatrix}
+	0\\
+	1\\
+	-1\\
+	0
+\end{pmatrix}
+\]
+A sajátértékek pedig $\lambda_1 = 0$, $\lambda_2 = -2(1 + e^{-2K})$, $\lambda_3 = -2e^{-K}$ és $\lambda_4 = -2$. Itt a $K$ értékek az előadáson használt jelölés, $K = \beta J$, $\beta = 1/k_bT$.
+A kezdeti feltétel:
+\[
+\vec{P}(t = 0) = 
+\begin{pmatrix}
+	0\\
+	0\\
+	1\\
+	0
+\end{pmatrix}
+= \vec{P}^{(e)} + \sum^{4}_{i = 2}a_i\vec{P}^{i}.
+\]
+Ezeből a kövekező egyenleteket kapjuk az $a_i$ együtthatókra:
+\begin{equation}
+\frac{e^K}{2(e^K+e^{-K})}+a_2+a_3 = 0
+\end{equation}
+\begin{equation}
+\frac{e^{-K}}{2(e^K+e^{-K})}-a_2+a_4 = 0
+\end{equation}
+\begin{equation}
+\frac{e^{-K}}{2(e^K+e^{-K})}-a_2-a_4 = 1
+\end{equation}
+\begin{equation}
+\frac{e^K}{2(e^K+e^{-K})}+a_2-a_3 = 0
+\end{equation}
+Kivonva az (1)-ből a (4)-est, $a_3 = 0$. Ezt behelyettesítve az (1)-esbe, $a_2 = -\frac{e^K}{2(e^K+e^{-K})}$. A (2)-ből a (3)-ast kivonva $ a_4 = -0.5$.\\
+Most összegezzük fel a végeredményt, de mi a $\vec{P}$-nek csak a második komponensére vagyunk kíváncsiak.
 
 \newpage
 \section*{2. feladat}
@@ -35,7 +98,6 @@ az óramutatójárásával egy irányban és $w_2$ az ellenkezőirányban. Felad
 Határozzuk meg a stacionáris megoldást!\\
 Határozzuk meg a rendszer rrelaxációs idejét  (előszőr próbáljuk megbecsülni az értékét)!
 
-
 \subsection*{A feladat megoldása}
 $i  \epsilon  \{1, 2,3 \}$, így az egyenletrendszerünk a következő:
 $$\partial_t P_1 = -(w_1 + w_2)P_1 + w_2P_2 + w_1P_3$$
@@ -44,12 +106,12 @@ $$\partial_t P_3 = -(w_1 + w_2)P_3 + w_2P_1 + w_1P_2$$\\
 A következő átmeneti mátrixot használom majd:
 \[
 \doubleunderline\alpha=
-  \begin{bmatrix}
+  \begin{pmatrix}
     -(w_1+w_2) & w_2 & w_1 \\
     w_1&-(w_1+w2)&w_2\\
     w_2&w_1&-(w_1 + w_2)
     
-  \end{bmatrix}
+  \end{pmatrix}
 \] Így a következő sajátértékegyenletet írhatjuk fel:
 $$\partial _t\vec{P} =\doubleunderline\alpha  \vec{P},$$
 $\vec{P} = (P_1, P_2, P_3)$ jelöléssel. Stacionárius állapotban az egyenlet baloldala nulla, a $0$-ás sajátértékhez tartozó sajátvektor a megoldásunk. 
@@ -57,21 +119,24 @@ $$0\vec{P} = \doubleunderline\alpha_0 \vec{P}.$$
 A homogén, lineáris egyenletrendszer túlhatározott, így kell mellékfeltételként: $\sum^3_{i = 1}P_i = 1$ és $P_i> 0.$ A következő vektor kielégíti az egyenleteket:
 \[
 \vec{P}=
-  \begin{bmatrix}
+  \begin{pmatrix}
     \frac{1}{3(w_1+w_2)}\\
    \frac{1}{3(w_1+w_2)}\\
     \frac{1}{3(w_1+w_2)}
     
-  \end{bmatrix}
+  \end{pmatrix}
 \]
-A rendszer szimmetrikussága miatt nem meglepő a stacionárius állapotra kapott eredmény. Relaxációs idő számolásához ismét felírhatjuk a sajátérték egyenletet, de most általános esetben oldjuk meg:
+A rendszer szimmetrikussága miatt nem meglepő a stacionárius állapotra kapott eredmény.($\vec{P} = 1/3(1,1,1))$, mert $w_1 + w_2 = 1$. Relaxációs idő számolásához ismét felírhatjuk a sajátérték egyenletet, de most általános esetben oldjuk meg:
 $$\partial _t \vec{P_\alpha} = \lambda_\alpha \vec{P_\alpha},$$ 
 ahol $\lambda_\alpha $ az $\alpha$-adik sajátértéke. A megoldást kereshetjük a következő alakban:
 $$\vec{P}_\alpha (t) = a_\alpha e^{-\lambda \frac{t}{\tau}}\vec{P_\alpha}$$
-A relaxációs idő pedig $\tau_{relax} = \frac{\tau}{|\lambda_{min}|}$
-
-
-
+A relaxációs idő pedig $\tau_{relax} = \frac{\tau}{|\lambda_{min}|}, $ ha $\tau$ időközönként van átmenet. Megoldva a sajátértékegyenletet, a következő egyenletet kapjuk $\lambda$-ra:
+$$\lambda_{1,2} = \frac{-3(w_1+w_2)\pm\sqrt{12\cdot w_1w_2-3(w_1+w_2)^2}}{2}$$
+$$\lambda_{min} =\frac{-3(w_1+w_2)-\sqrt{12w_1w_2-3(w_1+w_2)^2)}}{2} $$
+És így:
+$$\tau_{relax} = \frac{2\tau}{3(w_1+w_2)+\sqrt{12w_1w_2-3(w_1+w_2)^2}}$$.
+Esetünkben két felé léphet a részecske, $w_1 + w_2 = 1$, így kicsitt szebben is lehet írni:
+$$\tau_{relax } \frac{2\tau}{3+\sqrt{12w_1w_2-3}}$$
 
 \newpage
 \section*{3. feladat}
