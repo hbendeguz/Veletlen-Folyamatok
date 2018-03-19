@@ -87,7 +87,53 @@ Ezeből a kövekező egyenleteket kapjuk az $a_i$ együtthatókra:
 \frac{e^K}{2(e^K+e^{-K})}+a_2-a_3 = 0
 \end{equation}
 Kivonva az (1)-ből a (4)-est, $a_3 = 0$. Ezt behelyettesítve az (1)-esbe, $a_2 = -\frac{e^K}{2(e^K+e^{-K})}$. A (2)-ből a (3)-ast kivonva $ a_4 = -0.5$.\\
-Most összegezzük fel a végeredményt, de mi a $\vec{P}$-nek csak a második komponensére vagyunk kíváncsiak.
+Most összegezzük fel a végeredményt, de mi a $\vec{P}$-nek csak a második komponensére vagyunk kíváncsiak:
+$$\vec{P}(\downarrow\uparrow, t) = \frac{e^{-K}}{2(e^K+e^{-K})} + \frac{e^{-K}}{2(e^K+e^{-K})}\cdot e^{-2(1 + e^{-2K})t}-\frac{1}{2}e^{-2t}$$
+Így ez lett a keresett valószínűség.
+\\\\
+(ii) Hasonló módon kell csinálni a mágnesezettséggel is:
+$$M(t) = \langle( s_1+s_2)\rangle = \sum_{s_1=\pm1}\sum_{s_2=\pm1}(s_1+s_2)P(s_1, s_2, t)$$
+A kezdeti feltétel most $\vec{P}(t = 0) = (1/2, 0,0, 1/2)$. Erre a következő egyenletek adódnak:
+\begin{equation}
+\frac{e^K}{2(e^K+e^{-K})}+a_2+a_3 = \frac{1}{2}
+\end{equation}
+\begin{equation}
+\frac{e^{-K}}{2(e^K+e^{-K})}-a_2+a_4 = 0
+\end{equation}
+\begin{equation}
+\frac{e^{-K}}{2(e^K+e^{-K})}-a_2-a_4 = 0
+\end{equation}
+\begin{equation}
+\frac{e^K}{2(e^K+e^{-K})}+a_2-a_3 = \frac{1}{2}
+\end{equation}
+Hasonlóan az előzőekhez, (5)-ből kivonva (6)-ost kapjuk, hogy $a_3 = \frac{1}{2}$. visszahelyettesítve az (5)-be, $a_2=-\frac{e^K}{2(e^K+e^{-K})} $, a (6)-osból kivonva a (7)-est $a_4 = 0$-t kapunk. Így megkaphatjuk a $\vec{P}(t)$-t:
+\[
+\vec{P}(t) = \frac{1}{2(e^K+e^{-K})}
+\begin{pmatrix}
+e^{K}\\
+	e^{-K}\\
+	e^{-K}\\
+	e^{K}
+\end{pmatrix} 
++ \frac{e^{-K}}{2(e^K+e^{-K})}\cdot e^{-2(1 + e^{-2K})t}
+\begin{pmatrix}
+	1\\
+	-1\\
+	-1\\
+	1
+\end{pmatrix}
++ \frac{1}{2}e^{-2e^{-K}t}
+\begin{pmatrix}
+	1\\
+	0\\
+	0\\
+	-1
+\end{pmatrix}
+\]
+Az $M(t)$-re felírt egyenletben az $s_1+s_2 = 0$ résznél kiesnek az $\uparrow\downarrow$ és $\downarrow\uparrow$ állapotok, megmaradnak viszont az $\uparrow\uparrow$ és $\downarrow\downarrow$ állapotok. Így a mágnesezettség:
+$$ M(t) = 2\cdot \big (\frac{1}{2(e^K+e^{-K})} e^K + \frac{e^{-K}}{2(e^K+e^{-K})}\cdot e^{-2(1 + e^{-2K})t} + \frac{1}{2}e^{-2e^{-K}t} \big ) - ...$$ 
+a $\vec{P}(t)$-re kapott összegből az első kettő tagnak a vektorainak az első és negyedik komponens ugyanaz, így azok kiejtik egymást, marad az utolsó tag:
+$$M(t) = 2\cdot\frac{1}{2}e^{-2e^{-K}t}- (-2)\cdot\frac{1}{2}e^{-2e^{-K}t} = 2\cdot e^{-2e^{-K}t} $$
 
 \newpage
 \section*{2. feladat}
