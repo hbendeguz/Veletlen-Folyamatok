@@ -27,10 +27,28 @@ $(i)$ Írjuk fel a folyamat master egyenletét!\\
 $(ii)$ Válasszunk olyan átmeneti rátákat, amelyek kielégítik a részletes egyensúly elvét!\\
 $(iii)$ Határozzuk meg az átlagos mágneses momentum $\langle \mu (t)\rangle$ időfejlődését, ha kezdetben (t = 0) a mágneses momentum a z-tengely pozitív irányába mutatott.
 \subsection*{A feladat mgoldása}
+$(i)$ A rendszer két állpot között változik, így ezekre az állapotokra felírva a master egyenlet:
+$$\partial _tP_{-\mu}(t) = -w_0P_{-\mu}(t) + wP_{mu}(t)$$
+$$\partial_t P_{\mu}(t)= w_0P_{-\mu}(t) - w P_{\mu}(t)$$
+Az egyenletekben $P_{\pm\mu}(t)$ a $\pm\mu$ állapotban tartózkodás valószínűségét jelöli. \\
+(ii) Először próbáljuk meg megoldani a sajátértékegyenletet:
+\[
+\partial_t
+\begin{pmatrix}
+P_{-\mu}(t)\\
+p_{+\mu}(t)
+\end{pmatrix}=
+\begin{pmatrix}
+-w_0& w_0\\
+w_0 & -w
+\end{pmatrix}
+\begin{pmatrix}
+P_{-\mu}(t)\\
+p_{+\mu}(t)
+\end{pmatrix}
+\]
 
-
-
-
+Az Ising-spinrendszerhez hasonlóan, a  $P^{(e)}_{\pm\mu} = \frac{1}{Z}e^{-\beta E(\mp \mu B)}$.
 \newpage
 \section*{2. feladat}
 \subsection*{A feladat szövege}
@@ -38,11 +56,24 @@ Legyen egy egész értékeket felvevő stochasztikus vátozó, n, momentum-gener
 $$\langle n\rangle = - \frac{dG(s)}{ds} \Big |_{\substack{ s=0 }}\hspace{0.7cm}, ...,\hspace{0.7cm} \langle n^k \rangle = (-1)^k\frac{d^kG(s)}{ds^k} \Big |_{\substack{ s=0 }}$$
 A kumuláns generátor függvény a momentum-generáor függvény logaritmusa,
 $$ \Phi (s) = \ln{G(s)}$$
+s a kumulánsokat a következőképpen kapjuk:
+$$\langle \kappa_1 \rangle = \frac{d\Phi(s)}{ds} \Big |_{\substack{ s=0 }} \hspace{0.5cm}, ..., \hspace{0.5cm} \langle \kappa_k \rangle = (-1)^k\frac{d^k\Phi}{ds^k}\Big |_{\substack{s = 0}}$$
+Az első kumulánsokat könnyű kiszámolni, s egyszerű értelműk van
+$$\langle \kappa_1\rangle = \langle n\rangle,  \hspace{0.5cm} \langle \kappa_2\rangle = \langle n^2\rangle -\langle n\rangle ^2,$$
+Feladatok:\\
+$(i)$ Határozzuk meg a kumulánsgeneráló függvényt az előadáson tárgyalt sorbanaállási problémára, s számítsuk ki az első két kumulánst! Vegyük észre, hogy az átlagos sorhossz és annak szórása lényegesen egyszerűbben kapható meg így, mint ha a momentumgeneráló fuüggvényen keresztül számoltuk volna.\\
+$(ii)$Számítsuk ki a 3. kumulánst $(\kappa_3)$ a momentumokon keresztül! Mi lesz $\kappa_3$ értéke, ha n eloszlásfüggvénye szimmetrikus $ (P_n = P_{-n})$?
+\subsection*{A feladat megoldása}
 
 
-
-
-
+\newpage
+\section*{3. feladat}
+\subsection*{A feladat szövege}
+Meredek hegyoldalban függőlegesen l távolságra vannak a kapaszkodoók. A hegymászó w rátával lép felfelé, s $w_0$ annak a rátaája, hogy visszacsűszik az $nl = 0$ szintre, s onnan folytatja a mászaást [ez a probléma példája az ún. újjrakezdési (reset) folyamatoknak].
+\\Feladatok:\\
+$(i)$Írjuk fel az egyenletet, amely meghatározza, hogy a hegymászó milyen $P_n$ valószínűséggel van nl magasságban!\\
+$(ii)$ Határozzuk meg, hogy átlagosan milyen magasra jut a hegymászó!
+\subsection*{A feladat megoldása}
 
 
 
