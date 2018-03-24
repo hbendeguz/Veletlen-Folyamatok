@@ -60,7 +60,7 @@ megkaptuk az átmeneti rátákat.\\
 $$\vec{P}(t) = \vec{P}^{(e)} + e^{\lambda_2 t} a_2 \vec{P}_2$$
 Az $a_2$ együtthatót a kezdeti feltételből határozhatjuk meg, ami esetünkben
 $$\vec{P}(0) = (0, 1)^T = \vec{P}^{(e)} + a_2\vec{P}_2.$$
-$\vec{P}_2 = (1, -1)^T$ sajátvektor, így behelyettesítve az egyenletbe
+$\vec{P}_2 = (1, -1)^T$ sajátvektor\footnote{Megjegyzés: $T$-vel a transzponálást jelöltem.}, így behelyettesítve az egyenletbe
 $$a_2 = -\frac{1}{Z}e^{-\beta \mu_B B}$$
 Tehát
 \[
@@ -83,17 +83,20 @@ $$\langle \mu(t)\rangle = \frac{1}{Z}\Big [ -e^{-\beta \mu_B B}+2e^{-\beta \mu_B
 
 
 
+
+
+
 \newpage
 
 
 \section*{2. feladat}
 \subsection*{A feladat szövege}
 Legyen egy egész értékeket felvevő stochasztikus vátozó, n, momentum-generátor fuüggvénye G(s). A normalizációból következik, hogy G(0) = 1, s n momentumai G deriváltján keresztül kifejezhetők:
-$$\langle n\rangle = - \frac{dG(s)}{ds} \Big |_{\substack{ s=0 }}\hspace{0.7cm}, ...,\hspace{0.7cm} \langle n^k \rangle = (-1)^k\frac{d^kG(s)}{ds^k} \Big |_{\substack{ s=0 }}$$
+$$\langle n\rangle = - \frac{dG(s)}{ds} \Bigg |_{\substack{ s=0 }}\hspace{0.7cm}, ...,\hspace{0.7cm} \langle n^k \rangle = (-1)^k\frac{d^kG(s)}{ds^k} \Bigg |_{\substack{ s=0 }}$$
 A kumuláns generátor függvény a momentum-generáor függvény logaritmusa,
 $$ \Phi (s) = \ln{G(s)}$$
 s a kumulánsokat a következőképpen kapjuk:
-$$\langle \kappa_1 \rangle = \frac{d\Phi(s)}{ds} \Big |_{\substack{ s=0 }} \hspace{0.5cm}, ..., \hspace{0.5cm} \langle \kappa_k \rangle = (-1)^k\frac{d^k\Phi}{ds^k}\Big |_{\substack{s = 0}}$$
+$$\langle \kappa_1 \rangle = \frac{d\Phi(s)}{ds} \Bigg |_{\substack{ s=0 }} \hspace{0.5cm}, ..., \hspace{0.5cm} \langle \kappa_k \rangle = (-1)^k\frac{d^k\Phi}{ds^k}\Bigg |_{\substack{s = 0}}$$
 Az első kumulánsokat könnyű kiszámolni, s egyszerű értelműk van
 $$\langle \kappa_1\rangle = \langle n\rangle,  \hspace{0.5cm} \langle \kappa_2\rangle = \langle n^2\rangle -\langle n\rangle ^2,$$
 Feladatok:\\
@@ -107,17 +110,27 @@ $$P_n = \frac{\lambda_n\lambda_{n-1}\text{...}\lambda_0}{\mu_n\mu_{n-1}\text{...
 \mu_1}P_0$$
 $$P_{-n} =\frac{\mu_0\mu_{-1}{...}\mu_{-(n+1)}}{\lambda_{-1}\lambda_{-2}{...}\lambda_{-n}}P_0$$
 Esetünkben a momentum-generátor függvény csak 0-tól megy a szummázás, így onnantól fog kelleni a $P_n$. Számoljuk ki az első kumulánst:
-$$\langle \kappa_1 \rangle = -\frac{d\Phi(s)}{ds}\Big |_{s = 0} =- \frac{d \ln(G(s))}{ds}\Big |_{s = 0} =-\Big (\frac{1}{G(s)}\frac{dG(s)}{ds}\Big )\Big |_{s = 0} = -\frac{dG(s)}{ds} \Big |_{s = 0} =  -(-n)P_0 +\sum^\infty_{n=1}P_n=$$
-$$=nP_0 + (1-P_0)=P_0(n-1)+ 1 $$ 
+$$\langle \kappa_1 \rangle = -\frac{d\Phi(s)}{ds}\Bigg |_{s = 0} =- \frac{d \ln(G(s))}{ds}\Bigg |_{s = 0} =-\Bigg (\frac{1}{G(s)}\frac{dG(s)}{ds}\Bigg )\Bigg |_{s = 0} = -\frac{dG(s)}{ds} \Bigg |_{s = 0} =  \sum^\infty_{n=0} nP_n$$
+%$$=nP_0 + (1-P_0)=P_0(n-1)+ 1 $$ 
 A második kumuláns:
-$$\langle \kappa_2 \rangle = \frac{d}{ds}\frac{d}{ds}\ln(G(s))\Big |_{s = 0}= \Big (\frac{d}{ds}\frac{1}{G(s)}+\frac{d^2G(s)}{ds^2}\Big )\Big |_{s = 0} = \Big(- \frac{1}{G^2(s)}\frac{dG(s)}{ds}+  \frac{d^2G(s)}{ds^2}  \Big )\Big |_{s = 0} = $$
-$$= \langle n \rangle + n^2 P_1+(1-P_1-P_0)$$
-%$$\langle n \rangle = \sum^{\infty}_{n}nP_n$$
-%Legyen inkább 
-%$$\Phi(s) = \ln(G(s)) = \ln(\sum^\infty_{n=0}e^{-sn}P_n) = \ln{\sum^\infty_{n=0}(e^{-sn}\big[P_0 + \sum^\infty_{n=1}\prod^{n}_{k=0}\frac{\lambda_{k-1}}{\mu_k}\big ])}$$
-
-
-
+$$\langle \kappa_2 \rangle = \frac{d}{ds}\frac{d}{ds}\ln(G(s))\Bigg |_{s = 0}= \Bigg (\frac{d}{ds}\frac{1}{G(s)}\frac{dG(s)}{ds}+\frac{1}{G(s)}\frac{d^2G(s)}{ds^2}\Bigg )\Bigg |_{s = 0} = \Bigg(- \frac{1}{G^2(s)}\frac{dG(s)}{ds}+  \frac{1}{G(s)}\frac{d^2G(s)}{ds^2}  \Bigg )\Bigg |_{s = 0} = $$
+$$=- \langle n \rangle ^2+\sum^\infty_{n=0} n^2P_n = -\langle n \rangle^2 +\langle n^2 \rangle $$\\
+\par
+ A sorbanállási problémánal, ahol $\lambda_n = \lambda$ és $\mu_n = \mu$ volt, a momentum-generátor függvény egyensúlyi alakjára a következőt kaptuk:
+ $$G_e(s)= \frac{(1-e^s)P_0}{1-e^s+q_qe^{-s}} = \frac{P_0}{1-qe^{-s}} $$
+ ahol $q = \frac{\lambda}{mu}$. Ennek véve a logaritmusát:
+ $$\Phi(s) = \ln G(s) = \ln{P_0}-\ln{(1-qe^{-s})}$$
+Ezt deriváljuk $s$ szerint, majd kiértékeljuük az $s = 0$ helyen:
+$$\langle \kappa_1\rangle = \frac{d\Phi(s)}{ds}\Bigg |_{s = 0} = \frac{1}{1-qe^{-s}}qe^{-s} \Bigg |_{s = 0} = \frac{q}{1-q} = \langle n\rangle$$
+Tényleg azt kaptuk, mint a momentum-generátor függvény deriválásával. Megnézem a második deriváltat:
+$$\langle \kappa_2 \rangle = -\frac{d^2\Phi(s)}{ds^2}\Bigg |_{s = 0} = -\frac{d}{ds}\frac{qe^{-s}}{1-qe^{-s}}\Bigg |_{s = 0} =-\Bigg (\frac{-qe^{-s}}{1-qe^{-s}} +\frac{q^2e^{-2s}}{(1-qe^{-s})^2}\Bigg )\Bigg |_{s = 0 } = $$
+$$ = \frac{q}{1-q} - \frac{q^2}{(1-q)^2} = \langle n^2\rangle-\langle n\rangle ^2$$
+És megint ugyanazt kaptuk.\\
+$(ii)$ Számítsuk ki $\langle \kappa_3\rangle$-at:
+$$\langle \kappa_3 \rangle =  \frac{d}{ds} \Bigg (\frac{-qe^{-s}}{1-qe^{-s}} +\frac{q^2e^{-2s}}{(1-qe^{-s})^2}\Bigg )\Bigg |_{s = 0 }= \Bigg (\frac{+qe^{-s}}{1-qe^{-s}}-\frac{q^2e^{-2s}}{(1-qe^{-s})^2}+$$
+$$+\frac{2q^2e^{-2s}}{(1-qe^{-s})^3} + \frac{qe^{-s}}{(1-qe^{-s})^2}\Bigg )\Bigg |_{s= 0} =\frac{q}{1-q}\Bigg ( 1 - \frac{q}{1-q}-\frac{q^2}{1-q} +$$
+$$+\frac{2q^2}{(1-q)^2}+ \frac{1}{(1-q)^2}\Bigg ) = $$
+Ha az eloszlásfüggvény szimmetrikus, $\kappa_3 = 0$, mert akkor a várható értéknek is 0-nak kell lennie, és azzal kiemeltünk a $\kappa_3$ számításánál.
 
 
 
@@ -134,12 +147,20 @@ $$= \langle n \rangle + n^2 P_1+(1-P_1-P_0)$$
 \newpage
 \section*{3. feladat}
 \subsection*{A feladat szövege}
-Meredek hegyoldalban függőlegesen l távolságra vannak a kapaszkodoók. A hegymászó w rátával lép felfelé, s $w_0$ annak a rátaája, hogy visszacsűszik az $nl = 0$ szintre, s onnan folytatja a mászaást [ez a probléma példája az ún. újjrakezdési (reset) folyamatoknak].
+Meredek hegyoldalban függőlegesen l távolságra vannak a kapaszkodoók. A hegymászó w rátával lép felfelé, s $w_0$ annak a rátaája, hogy visszacsűszik az $nl = 0$ szintre, s onnan folytatja a mászást [ez a probléma példája az ún. újrakezdési (reset) folyamatoknak].
 \\Feladatok:\\
 $(i)$Írjuk fel az egyenletet, amely meghatározza, hogy a hegymászó milyen $P_n$ valószínűséggel van nl magasságban!\\
 $(ii)$ Határozzuk meg, hogy átlagosan milyen magasra jut a hegymászó!
 \subsection*{A feladat megoldása}
-
+A master-egyenlet:
+$$ \partial_tP_n(t) = -(w+w_0)P_n(t) + wP_{n-1}(t) $$
+$$\partial_tP_0(t ) = -(w)P_0(t) + \sum^\infty_{n = 1}w_0P_n(t)$$
+Így $P_0(t)$-ra kapunk egy differenciálegynelet:
+$$\partial_tP_0(t) = -(w+w_0)P_0(t) + w_0$$
+Megoldása:
+$$P_0(t) = A\cdot e^{-(w+w_0)t} + w_0\cdot t$$
+$$\partial_t P_1(t) =-(w+w_0)P_{1}(t) +w\cdot \Big[A\cdot e^{-(w+w_0)t} + w_0\cdot t\Big ] $$
+De itt már nagyon elbonyolódik a differenciálegyenlet, így más megoldási módot kell keresni.
 
 
 \end{document}
