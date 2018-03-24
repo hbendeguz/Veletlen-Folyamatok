@@ -22,7 +22,7 @@
 \section*{1. feladat}
 \subsection*{A feladat szövege}
 Lokalizált mágneses momentum ($\mu$) z-tengely irányú B mágneses térben van. A mágneses
-momentum ($\mu$) a tér irányában $\pm\mu B$ értéket vehet fel, s ezekben az állapotokban energiája $ \mp\mu BB$. A mágneses momentum T hőmérsékletű könyezettel van egyensúlyban, s kölcsönhatás eredményeképpen $\mu$ billeg a $-\mu B$ és $+\mu B$ állapotok között $ (-\mu B \leftrightarrow  +\mu B)$.\\
+momentum ($\mu$) a tér irányában $\pm\mu B$ értéket vehet fel, s ezekben az állapotokban energiája $ \mp\mu_BB$. A mágneses momentum T hőmérsékletű könyezettel van egyensúlyban, s kölcsönhatás eredményeképpen $\mu$ billeg a $-\mu B$ és $+\mu B$ állapotok között $ (-\mu B \leftrightarrow  +\mu B)$.\\
 $(i)$ Írjuk fel a folyamat master egyenletét!\\
 $(ii)$ Válasszunk olyan átmeneti rátákat, amelyek kielégítik a részletes egyensúly elvét!\\
 $(iii)$ Határozzuk meg az átlagos mágneses momentum $\langle \mu (t)\rangle$ időfejlődését, ha kezdetben (t = 0) a mágneses momentum a z-tengely pozitív irányába mutatott.
@@ -39,7 +39,7 @@ P_{-\mu}(t)\\
 p_{+\mu}(t)
 \end{pmatrix}=
 \begin{pmatrix}
--w_0& w_0\\
+-w_0& w\\
 w_0 & -w
 \end{pmatrix}
 \begin{pmatrix}
@@ -48,7 +48,41 @@ p_{+\mu}(t)
 \end{pmatrix}
 \]
 
-Az Ising-spinrendszerhez hasonlóan, a  $P^{(e)}_{\pm\mu} = \frac{1}{Z}e^{-\beta E(\mp \mu B)}$.
+Az Ising-spinrendszerhez hasonlóan, a  $P^{(e)}_{\pm\mu} = \frac{1}{Z}e^{-\beta E(\mp \mu B)}$. A sajátértékek a számolás után a következőknek adódnak: $\lambda_1 = 0$, ez az egyensúlyi állapothoz tarozik, és $\lambda_2 = -(w_0 + w)$. Ezek után a részletes egyensúlyi elvét kielégítő átmeneti rátákat kell meghatározni. Legyen 
+$$\frac{w_{n, n'}}{w_{n', n}} = e^{-\beta(E_{n'}-E_{n})}  $$
+Ha $\Delta E = (E_{n'}-E_{n})> 0$, akkor az átmeneti ráta
+$$w_{n',n} =\frac{1}{\tau}e^{-\beta(E_{n'}-E_{n})} .$$
+A $\Delta E = \pm 2\mu_B B$ és pozitív, ha felfelé álló állapotból lefelé álló állapotba ugrott a mágneses momentum. Ha $\Delta E < 0$, akkor $w_{n',n} = \frac{1}{\tau}$, $\tau$ az urgások közti idő. Így 
+$$w_0 = \frac{1}{\tau}$$
+$$w= \frac{1}{\tau}e^{-\beta 2 \mu_B B}$$
+megkaptuk az átmeneti rátákat.\\
+(iii) Az előző feladatrészben kiszámoltuk a sajátértékeket, így az állapotban tartózkodás valószínűségét leíró vektort a következő módon kaphatjuk meg:
+$$\vec{P}(t) = \vec{P}^{(e)} + e^{\lambda_2 t} a_2 \vec{P}_2$$
+Az $a_2$ együtthatót a kezdeti feltételből határozhatjuk meg, ami esetünkben
+$$\vec{P}(0) = (0, 1)^T = \vec{P}^{(e)} + a_2\vec{P}_2.$$
+$\vec{P}_2 = (1, -1)^T$ sajátvektor, így behelyettesítve az egyenletbe
+$$a_2 = -\frac{1}{Z}e^{-\beta \mu_B B}$$
+Tehát
+\[
+ \vec{P}(t) = \frac{1}{Z}
+\begin{pmatrix}
+e^{-\beta \mu_B B}\\
+e^{+\beta \mu_B B}
+\end{pmatrix}
+-\frac{1}{Z}e^{-\beta \mu_B B} e^{-\frac{1+\frac{1}{\tau}e^{-\beta 2 \mu_B B}}{\tau}t}
+\begin{pmatrix}
+1\\
+-1
+\end{pmatrix}
+\]
+Nekünk viszont a feladat teljes megoldásához a mágnesezettség várható értéke kell, amit a következő módon kaphtaunk meg:
+$$\langle \mu(t)\rangle = (-1, 1)^T \vec{P}(t).$$
+$$\langle \mu(t)\rangle = \frac{1}{Z}\Big [ -e^{-\beta \mu_B B}+2e^{-\beta \mu_B B}\cdot  e^{-\frac{1+\frac{1}{\tau}e^{-\beta 2 \mu_B B}}{\tau}t} +e^{\beta \mu_B B} \Big ]$$
+
+
+
+
+
 \newpage
 \section*{2. feladat}
 \subsection*{A feladat szövege}
