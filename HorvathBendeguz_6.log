@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 MAR 2018 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 MAR 2018 16:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -696,37 +696,46 @@ LaTeX Info: Redefining \mit on input line 497.
 ) [1
 
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4]
-(./HorvathBendeguz_6.aux) ) 
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (36.55019pt too wide) detected at line 110
+\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 ^^T[]\OMS/cmsy/m/n/12 i \OT1/cmr/m/n/12 = \O
+MS/cmsy/m/n/12 ^^@[][][] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[][][] \OT1/cmr/
+m/n/12 = \OMS/cmsy/m/n/12 ^^@[][][][][][] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^
+@[][][] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12
+ ^^@\OML/cmm/m/it/12 n\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P[] \OT1/cmr/m/n/12 + [
+] \OML/cmm/m/it/12 P[] \OT1/cmr/m/n/12 =
+ []
+
+[3] [4] [5] (./HorvathBendeguz_6.aux) ) 
 Here is how much of TeX's memory you used:
- 4856 strings out of 492995
- 72562 string characters out of 6132704
- 147972 words of memory out of 5000000
- 8386 multiletter control sequences out of 15000+600000
- 13038 words of font info for 37 fonts, out of 8000000 for 9000
+ 4860 strings out of 492995
+ 72602 string characters out of 6132704
+ 149972 words of memory out of 5000000
+ 8388 multiletter control sequences out of 15000+600000
+ 14568 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,7n,38p,383b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/
-cm-super/cm-super-t1.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on HorvathBendeguz_6.pdf (4 pages, 166048 bytes).
+{/usr/local/texlive/2017/texmf-dist/font
+s/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-sup
+er/sfbx1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super
+/sfbx1728.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/s
+frm1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfr
+m1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm2
+074.pfb>
+Output written on HorvathBendeguz_6.pdf (5 pages, 169039 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

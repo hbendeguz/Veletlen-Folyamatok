@@ -26,7 +26,7 @@ momentum ($\mu$) a tér irányában $\pm\mu B$ értéket vehet fel, s ezekben az
 $(i)$ Írjuk fel a folyamat master egyenletét!\\
 $(ii)$ Válasszunk olyan átmeneti rátákat, amelyek kielégítik a részletes egyensúly elvét!\\
 $(iii)$ Határozzuk meg az átlagos mágneses momentum $\langle \mu (t)\rangle$ időfejlődését, ha kezdetben (t = 0) a mágneses momentum a z-tengely pozitív irányába mutatott.
-\subsection*{A feladat mgoldása}
+\subsection*{A feladat megoldása}
 $(i)$ A rendszer két állpot között változik, így ezekre az állapotokra felírva a master egyenlet:
 $$\partial _tP_{-\mu}(t) = -w_0P_{-\mu}(t) + wP_{mu}(t)$$
 $$\partial_t P_{\mu}(t)= w_0P_{-\mu}(t) - w P_{\mu}(t)$$
@@ -84,6 +84,8 @@ $$\langle \mu(t)\rangle = \frac{1}{Z}\Big [ -e^{-\beta \mu_B B}+2e^{-\beta \mu_B
 
 
 \newpage
+
+
 \section*{2. feladat}
 \subsection*{A feladat szövege}
 Legyen egy egész értékeket felvevő stochasztikus vátozó, n, momentum-generátor fuüggvénye G(s). A normalizációból következik, hogy G(0) = 1, s n momentumai G deriváltján keresztül kifejezhetők:
@@ -98,6 +100,35 @@ Feladatok:\\
 $(i)$ Határozzuk meg a kumulánsgeneráló függvényt az előadáson tárgyalt sorbanaállási problémára, s számítsuk ki az első két kumulánst! Vegyük észre, hogy az átlagos sorhossz és annak szórása lényegesen egyszerűbben kapható meg így, mint ha a momentumgeneráló fuüggvényen keresztül számoltuk volna.\\
 $(ii)$Számítsuk ki a 3. kumulánst $(\kappa_3)$ a momentumokon keresztül! Mi lesz $\kappa_3$ értéke, ha n eloszlásfüggvénye szimmetrikus $ (P_n = P_{-n})$?
 \subsection*{A feladat megoldása}
+A momentum-generátor függvényünk a következő alakú:
+$$G(s) = \sum^{\infty}_{n = 0}e^{-sn}P_n$$
+$P_n$-et tudjuk az órán felírt megoldásból,
+$$P_n = \frac{\lambda_n\lambda_{n-1}\text{...}\lambda_0}{\mu_n\mu_{n-1}\text{...}
+\mu_1}P_0$$
+$$P_{-n} =\frac{\mu_0\mu_{-1}{...}\mu_{-(n+1)}}{\lambda_{-1}\lambda_{-2}{...}\lambda_{-n}}P_0$$
+Esetünkben a momentum-generátor függvény csak 0-tól megy a szummázás, így onnantól fog kelleni a $P_n$. Számoljuk ki az első kumulánst:
+$$\langle \kappa_1 \rangle = -\frac{d\Phi(s)}{ds}\Big |_{s = 0} =- \frac{d \ln(G(s))}{ds}\Big |_{s = 0} =-\Big (\frac{1}{G(s)}\frac{dG(s)}{ds}\Big )\Big |_{s = 0} = -\frac{dG(s)}{ds} \Big |_{s = 0} =  -(-n)P_0 +\sum^\infty_{n=1}P_n=$$
+$$=nP_0 + (1-P_0)=P_0(n-1)+ 1 $$ 
+A második kumuláns:
+$$\langle \kappa_2 \rangle = \frac{d}{ds}\frac{d}{ds}\ln(G(s))\Big |_{s = 0}= \Big (\frac{d}{ds}\frac{1}{G(s)}+\frac{d^2G(s)}{ds^2}\Big )\Big |_{s = 0} = \Big(- \frac{1}{G^2(s)}\frac{dG(s)}{ds}+  \frac{d^2G(s)}{ds^2}  \Big )\Big |_{s = 0} = $$
+$$= \langle n \rangle + n^2 P_1+(1-P_1-P_0)$$
+%$$\langle n \rangle = \sum^{\infty}_{n}nP_n$$
+%Legyen inkább 
+%$$\Phi(s) = \ln(G(s)) = \ln(\sum^\infty_{n=0}e^{-sn}P_n) = \ln{\sum^\infty_{n=0}(e^{-sn}\big[P_0 + \sum^\infty_{n=1}\prod^{n}_{k=0}\frac{\lambda_{k-1}}{\mu_k}\big ])}$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \newpage
