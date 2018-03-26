@@ -166,21 +166,22 @@ $$G(s,t) = \sum^\infty_{n=0}e^{-sn}P_{n}(t)$$
 Legyen 
 $$q = \frac{w}{w_0}\text{ és }\tau = \frac{1}{w_0}$$
 Így felírva a master egyenletet:
-$$\tau\partial_t G(s, t) = \sum^\infty_{n=0}e^{-sn}P_n= -qP_0+\sum^\infty_{n=1}e^{-s}P_n+\sum^\infty_{n = 1}-(1+q)e^{-sn}P_n+ qe^{-sn}P_{n-1}=$$
-$$=-qP_0 +\Big [-(1+q)+ qe^{-s}+ e^{-s}\Big ]G(s, t)$$
+$$\tau\partial_t G(s, t) = \sum^\infty_{n=0}e^{-sn}P_n= -qP_0+(1-P_0)+(1+q)P_0 -(1+q)G(s,t) +qe^{-s}G(s, t) = $$
+$$=1+\Big [-(1+q)+ qe^{-s}\Big ]G(s, t)$$
 
 
 
 
 
 Stacionárius megoldás esetén a baloldala nulla, így felírható $G_e(s, t)$:
-$$G_e(s) = \frac{qP_0}{-(1+q)+ qe^{-s}+ e^{-s}}$$
+$$G_e(s) = \frac{1}{(1+q)- qe^{-s}}$$
 Az előző feladatban láthattuk, hogy logaritmusát véve $G_(s)$-nek és utána $s$ szerint deriváljuk, kiértékeljük az $s =0$ helyen,  megkaphatjuk a várható értéket.
-tegyük meg:
-$$\ln{G_e(s)} = \ln{(qP_0)}- \ln{(-(1+q)+ qe^{-s}+ e^{-s})}$$
-$$\frac{d}{ds}\ln{G_e(s)}= -\frac{1}{(-(1+q)+ qe^{-s}+ e^{-s})}(-q-1)= \frac{q+1}{(-(1+q)+ qe^{-s}+ e^{-s})}$$
+Tegyük meg:
+$$\ln{G_e(s)} = \ln{1}- \ln{((1+q)- qe^{-s})}$$
+$$\frac{d}{ds}\ln{G_e(s)}= \frac{q}{(1+q)-qe^{-s}}$$
 Ezt kiértékeljük a 0 helyen:
-$$\frac{d}{ds}\ln{G_e(s)}\Big |_{s=0} = \frac{-P_0}{qP_0-1}+\frac{q}{q-(1+q)} $$
-$P_0$ értékét megkaphatjuk a $G(s=0) =1$ feltételből:
+$$\frac{d}{ds}\ln{G_e(s)}\Big |_{s=0} = \frac{q}{1} =q$$
+Tehát a várható érték:
+$$\langle nl\rangle = l\cdot\frac{w}{w_0}$$
 
 \end{document}
