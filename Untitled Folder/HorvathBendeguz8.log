@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 APR 2018 19:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 APR 2018 20:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**HorvathBendeguz_7.tex
-(./HorvathBendeguz_7.tex
+**HorvathBendeguz8.tex
+(./HorvathBendeguz8.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
@@ -568,15 +568,24 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(./HorvathBendeguz_7.aux
+(./HorvathBendeguz8.aux
+
+LaTeX Warning: Label `fig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:a' multiply defined.
+
 
 LaTeX Warning: Label `fig:b' multiply defined.
 
 
 LaTeX Warning: Label `sub@fig:b' multiply defined.
 
+
+LaTeX Warning: Label `fig: k' multiply defined.
+
 )
-\openout1 = `HorvathBendeguz_7.aux'.
+\openout1 = `HorvathBendeguz8.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
@@ -696,69 +705,71 @@ LaTeX Info: Redefining \mit on input line 497.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 50.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 49.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [1
-
-
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<four.png, id=21, 734.745pt x 266.9975pt>
-File: four.png Graphic file (type png)
- <use four.png>
-Package pdftex.def Info: four.png used on input line 153.
-(pdftex.def)             Requested size: 426.79134pt x 155.09494pt.
-
-<one.png, id=23, 401.5pt x 266.9975pt>
+)
+<one.png, id=1, 381.425pt x 266.9975pt>
 File: one.png Graphic file (type png)
  <use one.png>
-Package pdftex.def Info: one.png used on input line 163.
-(pdftex.def)             Requested size: 142.26698pt x 99.58603pt.
+Package pdftex.def Info: one.png used on input line 83.
+(pdftex.def)             Requested size: 170.71426pt x 113.8126pt.
 
-<two.png, id=24, 414.54875pt x 266.9975pt>
-File: two.png Graphic file (type png)
- <use two.png>
-Package pdftex.def Info: two.png used on input line 164.
-(pdftex.def)             Requested size: 142.2604pt x 99.58603pt.
+<foksz.png, id=3, 391.4625pt x 266.9975pt>
+File: foksz.png Graphic file (type png)
+ <use foksz.png>
+Package pdftex.def Info: foksz.png used on input line 84.
+(pdftex.def)             Requested size: 170.71487pt x 113.8126pt.
+ [1
 
-<three.png, id=25, 401.5pt x 266.9975pt>
-File: three.png Graphic file (type png)
- <use three.png>
-Package pdftex.def Info: three.png used on input line 165.
-(pdftex.def)             Requested size: 142.26698pt x 99.58603pt.
- [3 <./four.png> <./one.png> <./two.png> <./three.png>] (./HorvathBendeguz_7.au
-x)
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./o
+ne.png> <./foksz.png>] [3] <fck.png, id=33, 391.4625pt x 266.9975pt>
+File: fck.png Graphic file (type png)
+ <use fck.png>
+Package pdftex.def Info: fck.png used on input line 180.
+(pdftex.def)             Requested size: 170.71487pt x 99.58603pt.
+
+<hm.png, id=34, 397.485pt x 266.9975pt>
+File: hm.png Graphic file (type png)
+ <use hm.png>
+Package pdftex.def Info: hm.png used on input line 181.
+(pdftex.def)             Requested size: 170.72113pt x 99.58603pt.
+ [4 <./fck.png> <./hm.png>] [5] (./HorvathBendeguz8.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7642 strings out of 492995
- 111163 string characters out of 6132704
- 219409 words of memory out of 5000000
- 11082 multiletter control sequences out of 15000+600000
- 14422 words of font info for 40 fonts, out of 8000000 for 9000
+ 7651 strings out of 492995
+ 111263 string characters out of 6132704
+ 215403 words of memory out of 5000000
+ 11090 multiletter control sequences out of 15000+600000
+ 15197 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,40p,460b,1668s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,8n,40p,411b,1212s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on HorvathBendeguz_7.pdf (3 pages, 252785 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on HorvathBendeguz8.pdf (5 pages, 240887 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
