@@ -135,7 +135,7 @@ szükséges szimulációs lépés\\ \hline
 \end{tabular}
 \end{center} 
 A kapott eredmények átlaga: 1066.222, szórása : 358.287, így a szükséges lépések száma $1066.22\pm 358.287$. \\
-Az átlagos fokszámot $10^7$ lépés során vizsgáltam, és a 5 tizedes pontossággal $1.99999$-öt adott, így adódik a feltételezés, hogy $lim_{N\to\infty}\langle k\rangle = 2$. Az elméleti számolással a következő módon adódik, használhatjuk $P_k = \frac{1}{2^k}$ diszkrét alakot:
+Az átlagos fokszámot $10^7$ lépés során vizsgáltam, és a 5 tizedes pontossággal $1.99999$-nek adott, így adódik a feltételezés, hogy $lim_{N\to\infty}\langle k\rangle = 2$. Az elméleti számolással a következő módon kaphatjuk meg, használhatjuk $P_k = \frac{1}{2^k}$ alakot:
 $$\langle k\rangle = \sum^N_kkP_k = \sum^N_k k\frac{1}{2^k} = 2,$$
 ha $N\to \infty$.
 \newpage
@@ -188,8 +188,22 @@ Az ábrán látható, hogy nagyobb $k$ értékekre közelíti az $1/k^3$ függv�
 
 
 \subsection*{Eltolt lineáris preferenciális}
-
-
+Az előadáson megbeszéltek alapján a egy $k$ fokszámú csúcshoz csatolódás valószínűsége $w_k = \frac{(k+\lambda)}{\sum_k(k+\lambda)N_k}$. Ezzel felírhatjuk a Master egyenletet:
+$$N_k(N+1) = N_k(N)-w_kN_k+w_{k-1} N_{k-1}$$
+$$N_1(N+1) = N_1(N) - w_1N_1+1$$
+Kihasználva, hogy $w_k=\frac{k+\lambda}{(2+\lambda)N}$, a következő egyenletet írhatjuk fel:
+$$\frac{dN_k}{dN} = -\frac{k+\lambda}{2+\lambda}P_k + \frac{k+\lambda-1}{2+\lambda}P_{k-1}, $$
+ahol $P_k = N_k/N$. Kihasználva ezt:
+$$\frac{dN_k}{dN} = \frac{dNP_k}{dN} = P_k +N\frac{dP_k}{dN} = P_k + \frac{dP_k}{d\ln{N}}$$
+$$\frac{dP_k}{d\ln{N}} = -\frac{k+\lambda + (2+\lambda)}{2+\lambda}P_k + \frac{k+\lambda -1}{2+\lambda}P_{k-1}$$
+$$\frac{dP_1}{d\ln{N}} = -\frac{2\lambda + 3}{2+\lambda}P_1 + 1$$
+Ebből $P_1 =\frac{2+\lambda}{2\lambda + 3} $, ha egyensúlyi helyzetben nézzük, és az egyenlet bal oldalát $0$-val tesszük egyenlővé. Most megnézve $k\neq 1$-re:
+$$P_k = \frac{k+\lambda -1}{k + 2\lambda + 2}P_{k-1}.$$
+Kihasználva a rekurziós összefüggést:
+$$P_k = \frac{(k+\lambda -1)!}{(k+2\lambda + 2)!}P_1$$
+$\lambda = 1$ esetben:
+$$P_k = \frac{4\cdot3\cdot 2}{(k +4)\cdot(k+3)\cdot(k+2)\cdot (k+1)}P_1 =  \frac{4\cdot3\cdot 2}{(k +4)\cdot(k+3)\cdot(k+2)\cdot (k+1)}\frac{3}{5}$$
+És így valóban, $P_k \sim k^{-4}$, ha $\lambda = 1$. Innen már belátható általános $\lambda$-ra is, mert amikor a faktoriálisokat egymással osztunk, a nevező mindig $(3+\lambda)$-nyival tartalmaz több $k$-s tagot. 
 
 
 \end{document}
